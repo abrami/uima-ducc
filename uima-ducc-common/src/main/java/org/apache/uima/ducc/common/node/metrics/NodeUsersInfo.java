@@ -23,7 +23,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.uima.ducc.common.utils.id.IDuccId;
 
 
@@ -84,7 +84,7 @@ public class NodeUsersInfo implements Serializable {
     String rogue = ( reservations.size() == 0 ) ? "Y" : "N";
     
     sb.append(String.format("\n%32s%20s%8s%12s%12s\n","UserID","Reservation","Rogue","Java","NonJava"));
-    sb.append(String.format("%32s%20s%8s%12s%12s\n",StringUtils.center("", 30, "-"),StringUtils.center("", 18, "-"),StringUtils.center("", 6, "-"),StringUtils.leftPad("", 10, "-"),StringUtils.leftPad("", 10, "-")));
+    sb.append(String.format("%32s%20s%8s%12s%12s\n", StringUtils.center("", 30, "-"),StringUtils.center("", 18, "-"),StringUtils.center("", 6, "-"),StringUtils.leftPad("", 10, "-"),StringUtils.leftPad("", 10, "-")));
     if ( reservations.size() > 0 ) {
       for( NodeProcess process : reserveProcesses) {
         

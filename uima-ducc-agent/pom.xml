@@ -47,7 +47,15 @@
       http://svn.apache.org/viewvc/uima/uima-ducc/trunk/uima-ducc-agent
     </url>
   </scm>
-  
+
+    <repositories>
+        <repository>
+            <id>central</id>
+            <name>Maven Plugin Repository</name>
+            <url>https://repo1.maven.org/maven2</url>
+        </repository>
+    </repositories>
+
   <dependencies>
         <!-- Dependencies on other DUCC projects -->
         <dependency>

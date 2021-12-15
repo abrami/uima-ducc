@@ -19,9 +19,6 @@
 
 package org.apache.uima.ducc.transport.configuration.jd;
 
-import java.util.ArrayList;
-import java.util.Properties;
-
 import org.apache.camel.CamelContext;
 import org.apache.uima.ducc.common.component.AbstractDuccComponent;
 import org.apache.uima.ducc.common.container.FlagsHelper;
@@ -35,6 +32,9 @@ import org.apache.uima.ducc.container.jd.cas.CasManagerStats;
 import org.apache.uima.ducc.container.jd.mh.IMessageHandler;
 import org.apache.uima.ducc.ps.net.iface.IMetaTaskTransaction;
 import org.apache.uima.ducc.transport.configuration.jd.iface.IJobDriverComponent;
+
+import java.util.ArrayList;
+import java.util.Properties;
 
 public class JobDriverComponent extends AbstractDuccComponent
 implements IJobDriverComponent {

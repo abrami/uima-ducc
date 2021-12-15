@@ -24,6 +24,14 @@
 	<artifactId>uima-ducc-container</artifactId>
 	<name>${uima.ducc} ${project.artifactId}</name>
 
+    <repositories>
+        <repository>
+            <id>central</id>
+            <name>Maven Plugin Repository</name>
+            <url>https://repo1.maven.org/maven2</url>
+        </repository>
+    </repositories>
+
 	<!-- Special inheritance note even though the <scm> element that follows 
 		is exactly the same as those in super poms, it cannot be inherited because 
 		there is some special code that computes the connection elements from the 
@@ -61,7 +69,8 @@
 	</dependencyManagement>
 
 	<dependencies>
-		<!-- Dependencies on other DUCC projects -->
+
+        <!-- Dependencies on other DUCC projects -->
 		<dependency>
 			<groupId>org.apache.uima</groupId>
 			<artifactId>uima-ducc-common</artifactId>
@@ -81,8 +90,26 @@
 		<dependency>
 				<groupId>org.apache.uima</groupId>
 				<artifactId>uima-ducc-workitem-v2</artifactId>
-		</dependency>	
-	</dependencies>
+		</dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.8.9</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.uima</groupId>
+            <artifactId>uimaj-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-servlet</artifactId>
+            <version>9.4.18.v20190429</version>
+        </dependency>
+
+
+    </dependencies>
     <profiles>
 	<profile>
 	   <id>run-junit-tests</id>	

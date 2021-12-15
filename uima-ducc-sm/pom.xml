@@ -24,8 +24,15 @@
   <!-- Uses default packaging ie. jar  --> 
   <artifactId>uima-ducc-sm</artifactId>
   <name>${uima.ducc} ${project.artifactId}</name>
-  
-  
+
+    <repositories>
+        <repository>
+            <id>central</id>
+            <name>Maven Plugin Repository</name>
+            <url>https://repo1.maven.org/maven2</url>
+        </repository>
+    </repositories>
+
    <!-- Special inheritance note even though the <scm> element that follows 
 		is exactly the same as those in super poms, it cannot be inherited because 
 		there is some special code that computes the connection elements from the 

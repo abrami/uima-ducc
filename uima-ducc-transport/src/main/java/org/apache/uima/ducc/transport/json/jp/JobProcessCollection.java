@@ -18,31 +18,18 @@
 */
 package org.apache.uima.ducc.transport.json.jp;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+import org.apache.uima.ducc.common.utils.IOHelper;
+import org.apache.uima.ducc.common.utils.id.DuccId;
+import org.apache.uima.ducc.transport.event.common.*;
+
+import java.io.*;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.concurrent.ConcurrentSkipListMap;
 import java.util.zip.GZIPInputStream;
 import java.util.zip.GZIPOutputStream;
-
-import org.apache.uima.ducc.common.utils.IOHelper;
-import org.apache.uima.ducc.common.utils.id.DuccId;
-import org.apache.uima.ducc.transport.event.common.DuccWorkPopDriver;
-import org.apache.uima.ducc.transport.event.common.IDuccProcess;
-import org.apache.uima.ducc.transport.event.common.IDuccProcessMap;
-import org.apache.uima.ducc.transport.event.common.IDuccProcessWorkItems;
-import org.apache.uima.ducc.transport.event.common.IDuccWorkJob;
-import org.apache.uima.ducc.transport.event.common.TimeWindow;
-
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
 
 public class JobProcessCollection {
 

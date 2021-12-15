@@ -25,7 +25,13 @@
     <version>3.0.1-SNAPSHOT</version>
     <relativePath>../uima-ducc-parent/pom.xml</relativePath>
   </parent>
-  
+    <repositories>
+        <repository>
+            <id>central</id>
+            <name>Maven Plugin Repository</name>
+            <url>https://repo1.maven.org/maven2</url>
+        </repository>
+    </repositories>
   <!-- Inherits groupid and version from the parent pom project coordinates -->
   <!-- Uses default packaging ie. jar                                       -->
   <artifactId>uima-ducc-pm</artifactId>
@@ -59,8 +65,13 @@
 			<groupId>org.apache.uima</groupId>
 			<artifactId>uima-ducc-transport</artifactId>
 		</dependency>
+      <dependency>
+          <groupId>org.apache.activemq</groupId>
+          <artifactId>activemq-all</artifactId>
+          <version>5.15.10</version>
+      </dependency>
 
-	</dependencies>
+  </dependencies>
   
 
 </project>

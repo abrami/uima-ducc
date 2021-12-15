@@ -30,6 +30,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.regex.Pattern;
 
+import jdk.nashorn.internal.runtime.Version;
 import org.apache.uima.ducc.common.IDuccEnv;
 import org.apache.uima.ducc.common.Node;
 import org.apache.uima.ducc.common.NodeConfiguration;
@@ -49,7 +50,6 @@ import org.apache.uima.ducc.common.utils.DuccProperties;
 import org.apache.uima.ducc.common.utils.DuccPropertiesResolver;
 import org.apache.uima.ducc.common.utils.IllegalConfigurationException;
 import org.apache.uima.ducc.common.utils.SystemPropertyResolver;
-import org.apache.uima.ducc.common.utils.Version;
 import org.apache.uima.ducc.common.utils.id.DuccId;
 import org.apache.uima.ducc.common.utils.id.DuccIdFactory;
 import org.apache.uima.ducc.rm.persistence.access.IPersistenceAccess;

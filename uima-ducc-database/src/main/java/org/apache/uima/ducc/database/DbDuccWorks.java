@@ -18,9 +18,11 @@
 */
 package org.apache.uima.ducc.database;
 
-import java.util.ArrayList;
-import java.util.List;
-
+import com.datastax.driver.core.ResultSet;
+import com.datastax.driver.core.Row;
+import com.datastax.driver.core.SimpleStatement;
+import com.datastax.driver.core.exceptions.NoHostAvailableException;
+import com.google.gson.Gson;
 import org.apache.uima.ducc.common.db.DbHelper;
 import org.apache.uima.ducc.common.persistence.or.IDbDuccWorks;
 import org.apache.uima.ducc.common.persistence.or.ITypedProperties;
@@ -28,11 +30,8 @@ import org.apache.uima.ducc.common.persistence.or.TypedProperties;
 import org.apache.uima.ducc.common.utils.DuccLogger;
 import org.apache.uima.ducc.common.utils.id.DuccId;
 
-import com.datastax.driver.core.ResultSet;
-import com.datastax.driver.core.Row;
-import com.datastax.driver.core.SimpleStatement;
-import com.datastax.driver.core.exceptions.NoHostAvailableException;
-import com.google.gson.Gson;
+import java.util.ArrayList;
+import java.util.List;
 
 public class DbDuccWorks implements IDbDuccWorks {
 	

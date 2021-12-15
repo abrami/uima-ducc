@@ -22,7 +22,7 @@ import static org.junit.Assert.*;
 
 import java.util.Properties;
 
-import org.apache.commons.lang.SystemUtils;
+import org.apache.commons.lang3.SystemUtils;
 import org.apache.uima.ducc.common.crypto.Crypto;
 import org.junit.After;
 import org.junit.AfterClass;

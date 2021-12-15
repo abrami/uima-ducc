@@ -18,13 +18,14 @@
 */
 package org.apache.uima.ducc.transport.agent;
 
-import java.io.Serializable;
 
 import org.apache.uima.analysis_engine.AnalysisEngineManagement.State;
 
+import java.io.Serializable;
+
 public interface IUimaPipelineAEComponent extends Serializable{
 	public String getAeName();
-	public 	State getAeState();	
+	public State getAeState();
 	public void setAeState(State state );
 	public long getAeThreadId();
 	public long getInitializationTime();

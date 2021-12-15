@@ -26,7 +26,15 @@
     <version>3.0.1-SNAPSHOT</version>
     <relativePath>../uima-ducc-parent/pom.xml</relativePath>
   </parent>
-  
+
+    <repositories>
+        <repository>
+            <id>central</id>
+            <name>Maven Plugin Repository</name>
+            <url>https://repo1.maven.org/maven2</url>
+        </repository>
+    </repositories>
+
   <!-- Inherits groupid and version from the parent pom project coordinates -->
   <!-- Uses default packaging ie. jar  --> 
   <artifactId>uima-ducc-examples</artifactId>

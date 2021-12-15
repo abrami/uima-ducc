@@ -28,6 +28,14 @@
     <relativePath>../uima-ducc-parent/pom.xml</relativePath>
   </parent>
 
+    <repositories>
+        <repository>
+            <id>central</id>
+            <name>Maven Plugin Repository</name>
+            <url>https://repo1.maven.org/maven2</url>
+        </repository>
+    </repositories>
+
   <!-- packaging>pom</packaging -->
 
   <!-- Inherits groupid and version from the parent pom project coordinates -->
@@ -142,16 +150,16 @@ uima-ducc/uima-ducc-cli-${ducc.version}.jar uima-ducc/uima-ducc-common-${ducc.ve
                 <exclude>**/pom.*</exclude>
                 <exclude>**/DEPENDENCIES</exclude>
               </excludes>
-			  <resources>
-				 <resource>
-					<directory>target/maven-shared-archive-resources/META-INF</directory>
-                    <targetPath>META-INF</targetPath>
-                    <includes>
-                      <include>NOTICE</include>
-                      <include>LICENSE</include>
-                    </includes>
-				</resource>
-			  </resources>
+<!--			  <resources>-->
+<!--				 <resource>-->
+<!--					<directory>target/maven-shared-archive-resources/META-INF</directory>-->
+<!--                    <targetPath>META-INF</targetPath>-->
+<!--                    <includes>-->
+<!--                      <include>NOTICE</include>-->
+<!--                      <include>LICENSE</include>-->
+<!--                    </includes>-->
+<!--				</resource>-->
+<!--			  </resources>-->
 
             </configuration>
           </execution>

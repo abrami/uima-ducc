@@ -32,7 +32,14 @@
   <!-- Uses default packaging ie. jar                                       -->
   <artifactId>uima-ducc-database</artifactId>
   <name>${uima.ducc} ${project.artifactId}</name>
-  
+
+    <repositories>
+        <repository>
+            <id>central</id>
+            <name>Maven Plugin Repository</name>
+            <url>https://repo1.maven.org/maven2</url>
+        </repository>
+    </repositories>
   
   <!-- Special inheritance note even though the <scm> element that follows 
 		is exactly the same as those in super poms, it cannot be inherited because 
@@ -57,7 +64,13 @@
   </dependencyManagement>
   
   <dependencies>
-        <!-- Dependencies on other DUCC projects -->
+
+      <dependency>
+          <groupId>org.apache.uima</groupId>
+          <artifactId>uima-ducc-common</artifactId>
+      </dependency>
+
+      <!-- Dependencies on other DUCC projects -->
         <dependency>
 			<groupId>org.apache.uima</groupId>
 			<artifactId>uima-ducc-transport</artifactId>
@@ -101,6 +114,7 @@
           <groupId>org.hdrhistogram</groupId>
           <artifactId>HdrHistogram</artifactId>
         </dependency>
+
 
   </dependencies>
   

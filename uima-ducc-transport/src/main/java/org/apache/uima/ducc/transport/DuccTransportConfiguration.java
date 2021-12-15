@@ -55,7 +55,7 @@ public class DuccTransportConfiguration {
 	    	  credentials = BrokerCredentials.get(path);
 		      //logger.info("configureJMSTransport", null, "Username:"+credentials.getUsername()+" Password:"+credentials.getPassword());
 				if ( credentials.getUsername() != null && credentials.getPassword() != null ) {
-					duccAMQComponent.setUserName(credentials.getUsername());
+					duccAMQComponent.setUsername(credentials.getUsername());
 				    duccAMQComponent.setPassword(credentials.getPassword());
 				    System.out.println(">>>>>>>>>>>>>>> Running with AMQ Credentials");
 				    logger.info("configureJMSTransport", null, ">>>>>>>>>>>>>>> Running with AMQ Credentials");
@@ -82,7 +82,7 @@ public class DuccTransportConfiguration {
 	    	  String path = Utils.resolvePlaceholderIfExists(brokerCredentialsFile, System.getProperties());
 	    	  credentials = BrokerCredentials.get(path);
 				if ( credentials.getUsername() != null && credentials.getPassword() != null ) {
-					duccAMQComponent.setUserName(credentials.getUsername());
+					duccAMQComponent.setUsername(credentials.getUsername());
 				    duccAMQComponent.setPassword(credentials.getPassword());
 				    System.out.println(">>>>>>>>>>>>>>> Running with AMQ Credentials");
 				} 

@@ -17,7 +17,9 @@
    specific language governing permissions and limitations
    under the License.    
 --><!-- This pom serves as the release top level project for the multi-module 
-	project UIMA-DUCC --><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	project UIMA-DUCC -->
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
@@ -51,6 +53,14 @@
     </url>
 	</scm>
 
+    <repositories>
+        <repository>
+            <id>central</id>
+            <name>Maven Plugin Repository</name>
+            <url>https://repo1.maven.org/maven2</url>
+        </repository>
+    </repositories>
+
 	<!-- override pom setting in the build project. JIRA 5.1 needs different 
 		URL -->
 	<issueManagement>
@@ -66,6 +76,12 @@
 	<!-- declare dependency on each DUCC project -->
 	<dependencyManagement>
 	   <dependencies>
+
+           <dependency>
+               <groupId>org.apache.logging.log4j</groupId>
+               <artifactId>log4j</artifactId>
+               <version>2.15.0</version>
+           </dependency>
 
 		<dependency>
 			<groupId>org.apache.uima</groupId>
@@ -590,6 +606,6 @@
 		<module>uima-ducc-container</module>
         <module>uima-ducc-pullservice</module>
         <module>uima-ducc-workitem-v2</module>
-        <module>uima-ducc-workitem-v3</module>
+<!--        <module>uima-ducc-workitem-v3</module>-->
   </modules>
 </project>

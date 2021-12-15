@@ -55,7 +55,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 
-	/**
+/**
 	 * A {@link JobDriverConfiguration} to configure JobDriver component. Depends on 
 	 * properties loaded by a main program into System properties. 
 	 * 
@@ -69,14 +69,15 @@ import org.springframework.context.annotation.Import;
 		private static int port = 0;
 		
 		//	use Spring magic to autowire (instantiate and bind) CommonConfiguration to a local variable
-		@Autowired CommonConfiguration common;
+		@Autowired
+        CommonConfiguration common;
 		//	use Spring magic to autowire (instantiate and bind) DuccTransportConfiguration to a local variable
 		@Autowired DuccTransportConfiguration jobDriverTransport;
 		
 		/**
 		 * Instantiate {@link JobDriverEventListener} which will handle incoming messages.
 		 * 
-		 * @param jd - {@link JobDriverComponent} instance
+		 * @param jdc - {@link JobDriverComponent} instance
 		 * @return - {@link JobDriverEventListener}
 		 */
 		public JobDriverEventListener jobDriverDelegateListener(IJobDriverComponent jdc) {
@@ -177,7 +178,7 @@ import org.springframework.context.annotation.Import;
 		 * 
 		 * @throws Exception
 		 */
-		@Bean 
+		@Bean
 		public JobDriverComponent jobDriver() throws Exception {
 			String location = "jobDriver";
 			try {
